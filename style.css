@@ -5,7 +5,7 @@ html { box-sizing: border-box; }
 /*
 	BARVY
 	#f5f5f5					šedé pozadí stránky
-	#629fe0					modrá čárka
+						modrá čárka
 	Jedeme retro černobíle (až na tu modrou), dnes další barvy nepotřebujeme.
 
 	FONTY
@@ -13,6 +13,14 @@ html { box-sizing: border-box; }
 	Raleway					nadpisy a menu
 	Oba fonty jsou dostupné na Google Fonts.
 */
+
+:root{
+	--line: #629fe0;
+	--web: #f5f5f5;
+	--letter: #ffffff;
+	--write: gray;
+	--nav: rgb(227, 227, 227);
+}
 @font-face {
 	font-family: 'Merriweather';
 	src: url(fonts/Merriweather/Merriweather-Regular.ttf);
@@ -24,7 +32,7 @@ html { box-sizing: border-box; }
 }
 
 body {
-	background-color: #f5f5f5;
+	background-color: var(--web);
 	font-size: 16px;
 	line-height: 1.6;
 	font-family: 'Merriweather', sans-serif;
@@ -34,9 +42,20 @@ body {
 	background-image: url(images/island-hlavicka.jpg);
 	background-size: cover;
 	background-position: center;
-	color: white;
+	color: var(--letter);
 	padding: 30px;
 	text-align: center;
+	position: relative;
+}
+
+.start::before{ 
+	content: "";
+	background-color: rgba(0, 0, 0, 0.2);
+	position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
 }
 
 h1{
@@ -53,7 +72,7 @@ h2::after{
 	content: "";
 	width: 80px;
 	height: 3px;
-	background-color: #629fe0;
+	background-color: var(--line);
 	display: block;
 	margin: 20px 0;
 	margin-left: -40px;
@@ -71,7 +90,7 @@ h2::after{
 	content: "";
 	width: 80px;
 	height: 3px;
-	background-color: white;
+	background-color: var(--letter);
 	display: block;
 	margin: 20px auto;
 }
@@ -84,13 +103,13 @@ h2::after{
 
 .link{
 	list-style: none;
-	border-bottom: 1px solid rgb(227, 227, 227);
+	border-bottom: 1px solid var(--nav);
 	padding: 10px;
 	text-transform: uppercase;
 }
 .link a{
 	text-decoration: none;
-	color: gray;
+	color: var(--write);
 }
 
 .introduction,
@@ -101,7 +120,8 @@ h2::after{
 }
 
 p{ 
-	margin-bottom: 20px;	
+	margin-bottom: 20px;
+	position: relative;	
 }
 
 img{
@@ -111,21 +131,21 @@ img{
 
 .author{
 	text-align: center;
-	color: gray;
+	color: var(--write);
 	font-size: 14px;
 }
 
 .author a{
-	color: gray;
+	color: var(--write);
 }
 
 .end{
-	background-image: linear-gradient(to bottom, rgb(216, 216, 216), #f5f5f5);
+	background-image: linear-gradient(to bottom, var(--nav), var(--web));
 	padding: 20px 20px 0 20px;
-	color: gray;
+	color: var(--write);
 	font-size: 12px;
 }
 
 .end a{
-	color: gray;
+	color: var(--write);
 }
