@@ -2,18 +2,16 @@
 html { box-sizing: border-box; }
 *, ::after, ::before { box-sizing: inherit; padding: 0; margin: 0;}
 
-/*
-	BARVY
-	#f5f5f5					šedé pozadí stránky
-						modrá čárka
+/*	BARVY
+	#f5f5f5				šedé pozadí stránky
+	#629fe0					modrá čárka
 	Jedeme retro černobíle (až na tu modrou), dnes další barvy nepotřebujeme.
 
 	FONTY
 	Merriweather		základní font na stránce
-	Raleway					nadpisy a menu
+	Raleway				nadpisy a menu
 	Oba fonty jsou dostupné na Google Fonts.
 */
-
 :root{
 	--line: #629fe0;
 	--web: #f5f5f5;
@@ -25,19 +23,16 @@ html { box-sizing: border-box; }
 	font-family: 'Merriweather';
 	src: url(fonts/Merriweather/Merriweather-Regular.ttf);
 }
-
 @font-face {
 	font-family: 'Raleway';
 	src: url(fonts/Raleway/Raleway-VariableFont_wght.ttf);
 }
-
 body {
 	background-color: var(--web);
 	font-size: 16px;
 	line-height: 1.6;
 	font-family: 'Merriweather', sans-serif;
 }
-
 .start{
 	background-image: url(images/island-hlavicka.jpg);
 	background-size: cover;
@@ -47,7 +42,6 @@ body {
 	text-align: center;
 	position: relative;
 }
-
 .start::before{ 
 	content: "";
 	background-color: rgba(0, 0, 0, 0.2);
@@ -57,27 +51,27 @@ body {
     bottom: 0;
     left: 0;
 }
-
+.name{
+	position: static;
+}
 h1{
 	font-size: 70px;
 	font-family: 'Raleway', sans-serif;
+	position: relative;
 }
-
 h2{
 	font-family: 'Raleway', sans-serif;
 	padding: 20px;
 }
-
 h2::after{
 	content: "";
 	width: 80px;
-	height: 3px;
+	height: 4px;
 	background-color: var(--line);
 	display: block;
 	margin: 20px 0;
 	margin-left: -40px;
 }
-
 .start p{
 	font-size: 20px;
 	padding-bottom: 20px;
@@ -85,7 +79,6 @@ h2::after{
 .name{
 	font-style: italic;
 }
-
 .name::before{
 	content: "";
 	width: 80px;
@@ -94,13 +87,11 @@ h2::after{
 	display: block;
 	margin: 20px auto;
 }
-
 .menu{
 	padding: 20px;
 	text-align: center;
 	font-family: 'Raleway', sans-serif;
 }
-
 .link{
 	list-style: none;
 	border-bottom: 1px solid var(--nav);
@@ -111,7 +102,6 @@ h2::after{
 	text-decoration: none;
 	color: var(--write);
 }
-
 .introduction,
 .why,
 .see,
