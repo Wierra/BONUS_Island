@@ -112,12 +112,19 @@ h2::after{
 		display: flex;
 	}
 	li{
-		border: 1px solid var(--nav)
+		border: 1px solid var(--nav);
+		font-size: 13px;;
 	}
 	.link{
 		margin: 0; 
 		padding: 10px 10px;
 		width: 100%;
+	}
+	.uvod{
+		border-left: none;
+	}
+	.fotogalerie{
+		border-right: none;
 	}
 }
 @media screen and (min-width: 960px){
